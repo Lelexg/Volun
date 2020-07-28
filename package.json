@@ -1,0 +1,36 @@
+{
+  "name": "volun-portal",
+  "version": "0.1.0",
+  "description": "![GitHub](https://img.shields.io/github/license/Lelexg/volun?style=plastic)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.0.2",
+    "@material-ui/core": "^4.11.0",
+    "apollo-boost": "^0.4.9",
+    "graphql": "^15.3.0",
+    "graphql-tag": "^2.10.4",
+    "next": "^9.5.0",
+    "next-with-apollo": "^5.1.0",
+    "react": "^16.13.1",
+    "react-apollo": "^3.1.5",
+    "react-dom": "^16.13.1",
+    "styled-components": "^5.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lelexg/volun-portal.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lelexg/volun-portal/issues"
+  },
+  "homepage": "https://github.com/Lelexg/volun-portal#readme"
+}
