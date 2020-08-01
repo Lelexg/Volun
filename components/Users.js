@@ -1,6 +1,7 @@
 import React from 'react';
 import {graphql} from 'react-apollo';
 import gql from 'graphql-tag';
+import { useAuth0 } from "@auth0/auth0-react";
 
 const User = ({user}) => (
   <div className="card">
@@ -40,8 +41,13 @@ const Interest = ({interest}) => (
     </div>
 );
 
+
 const UserList = ({data}) => {
+  const { user, isAuthenticated } = useAuth0();
   const {error, users} = data;
+  if (!isAuthenticated) {
+    return <div>Please login first.</div>;
+  }
   if (error) {
     console.log(error)
     return <div>Error loading users.</div>;
@@ -49,6 +55,7 @@ const UserList = ({data}) => {
   if (users && users.length) {
     return (
       <section>
+        <h1>User List</h1>
         <ul>{users.map(user => <User key={user.id} user={user} />)}</ul>
       </section>
     );
