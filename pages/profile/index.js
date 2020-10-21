@@ -1,11 +1,13 @@
 import React from "react";
-import Login from './login';
-import Logout from './logout';
+import Login from '../../components/login/login';
+import Logout from '../../components/login/logout';
 import { useAuth0 } from "@auth0/auth0-react";
 import { useParams } from 'react-router-dom';
 
 const Profile = () => {
   const { user, isAuthenticated } = useAuth0();
+
+  console.log(user)
 
   return (
     isAuthenticated ? (

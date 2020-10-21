@@ -1,0 +1,36 @@
+.button-header button {
+  font-family: 'Courier New', Courier, monospace;
+  float: right;
+  text-align: center;
+  margin-top: 1.5%;
+  margin-right: 3%;
+  font-weight: bold;
+}
+
+.header {
+  text-align: center;
+  padding-left: 12%;
+  padding-right: 5%;
+  width: 90%;
+  height: 10%;
+  display: inline-block;
+}
+
+.logo {
+  height: 60px;
+  float: left;
+}
+
+.my-profile {
+  color: #6C63FF;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  text-align: center;
+  float: right;
+}
+
+.user-photo {
+  height: 40px;
+  border-radius: 5%;
+  float: right;
+}

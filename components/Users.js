@@ -23,7 +23,9 @@ const User = ({user}) => (
     <br></br>
     <footer className="card-footer">
       <div className="card-footer-item">
-        Interests: {user.interests.map(interest => <Interest key={interest.id} interest={interest} />)}
+        Interests: {user.interests.length > 0 
+                    ? user.interests.map(interest => <Interest key={interest.id} interest={interest} />) 
+                    : "None."}
       </div>
     </footer>
   </div>
