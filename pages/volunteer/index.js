@@ -47,7 +47,7 @@ const Index = () => {
       <Grid container sx={12} spacing={3} style={{marginTop: '5%', backgroundColor: '#D2CFFF'}}>
         <Grid item xs={4}>
           <h1 className="title1" style={{paddingLeft: '10%'}}>Descubra seu próximo projeto!</h1>
-          <h1 style={{paddingLeft: '10%', fontWeight: 'normal', }}>Mais procurados</h1>
+          <h1 style={{paddingLeft: '10%', fontWeight: 'normal', }}>Destaques</h1>
           <br></br>
           <div style={{width: '45%', float: 'left', marginLeft: '5%'}}><ProjectBox/></div>
           <div style={{width: '45%', float: 'right', marginLeft: '5%'}}><ProjectBox/></div>

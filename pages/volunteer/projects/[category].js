@@ -5,6 +5,8 @@ import { Button, Grid } from "@material-ui/core";
 import filter from '../../../public/images/filter.svg';
 import { useRouter } from 'next/router'
 
+import ProjectBox from '../../../components/volunteer/projectBox'
+
 const Index = () => {
   const { user, isAuthenticated } = useAuth0();
   
@@ -44,7 +46,7 @@ const Index = () => {
         </Grid>
       </Grid>
       <Grid container sx={12} className="projects">
-        <Grid item xs={4}>
+        <Grid item xs={1} style={{marginLeft: '5%'}}>
           <img style={{float: 'left', marginLeft: '10%', marginRight: '1%'}} src={filter} alt="filter"/>
           <h2>Filtros</h2>
           <hr></hr>
@@ -97,6 +99,26 @@ const Index = () => {
           <input type="checkbox" id="esporte" name="esporte" />
           <label for="esporte">Esporte</label>
           </div>
+        </Grid>
+        <Grid item xs={5}>
+          <div style={{width: '45%', float: 'left', marginLeft: '10%'}}><ProjectBox/></div>
+          <div style={{width: '45%', float: 'right'}}><ProjectBox/></div>
+          <div style={{width: '45%', float: 'left', marginLeft: '10%'}}><ProjectBox/></div>
+          <div style={{width: '45%', float: 'right'}}><ProjectBox/></div>
+          <div style={{width: '45%', float: 'left', marginLeft: '10%'}}><ProjectBox/></div>
+          <div style={{width: '45%', float: 'right'}}><ProjectBox/></div>
+          <div style={{width: '45%', float: 'left', marginLeft: '10%'}}><ProjectBox/></div>
+          <div style={{width: '45%', float: 'right'}}><ProjectBox/></div>
+        </Grid>
+        <Grid item xs={5}>
+          <div style={{width: '45%', float: 'left'}}><ProjectBox/></div>
+          <div style={{width: '45%', float: 'right', marginRight: '10%'}}><ProjectBox/></div>
+          <div style={{width: '45%', float: 'left'}}><ProjectBox/></div>
+          <div style={{width: '45%', float: 'right', marginRight: '10%'}}><ProjectBox/></div>
+          <div style={{width: '45%', float: 'left'}}><ProjectBox/></div>
+          <div style={{width: '45%', float: 'right', marginRight: '10%'}}><ProjectBox/></div>
+          <div style={{width: '45%', float: 'left'}}><ProjectBox/></div>
+          <div style={{width: '45%', float: 'right', marginRight: '10%'}}><ProjectBox/></div>
         </Grid>
       </Grid>
       </div>

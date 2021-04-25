@@ -81,6 +81,60 @@
   box-sizing: border-box;
 }
 
+.box-section {
+  padding-top: 2%;
+  padding-left: 5%;
+}
+
+.box-section h2 {
+  font-family: "Nunito";
+  src: url("/fonts/Nunito/Nunito-Bolder.ttf");
+  font-size: 2rem;
+}
+
+.box-section h5 {
+  font-family: "Nunito";
+  src: url("/fonts/Nunito/Nunito-Bold.ttf");
+  font-size: 1.2rem;
+}
+
+.box-section p {
+  font-family: "Nunito";
+  src: url("/fonts/Nunito/Nunito-Regular.ttf");
+  font-size: 1rem;
+}
+
+.box-section2 {
+  padding-top: 2%;
+  width: 100%;
+}
+
+.box-section2 button {
+  padding-top: 2%;
+  display: inline-block;
+  margin-bottom: 25%;
+  margin-top: 15%;
+}
+
+.box-section2 h3 {
+  font-family: "Nunito";
+  font-weight: 500;
+  src: url("/fonts/Nunito/Nunito-Semibold.ttf");
+  font-size: 1.3rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0px;
+}
+
+.box-section2 p {
+  font-family: "Nunito";
+  src: url("/fonts/Nunito/Nunito-Regular.ttf");
+  font-size: 1rem;
+  margin-top: 5%;
+  padding-bottom: 5%;
+}
+
 .box-skills {
   height: 10rem;
   width: 80%;
@@ -188,6 +242,15 @@
 .container h1, .container h3 {
   font-family: "Nunito";
   src: url("/fonts/Nunito/Nunito-Regular.ttf");
+}
+
+.container-box {
+  margin: 6%;
+  max-height: 200rem;
+  max-width: 90%;
+  background: #FFFFFF;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 30px;
 }
 
 .favorite-p {
@@ -326,6 +389,18 @@
   margin-top: 5%;
   margin-bottom: 10%;
   height: 50%;
+}
+
+.photo-box {
+  margin-left: 3%; 
+  max-width: 80%;
+  margin-top: 8%;
+  max-height: 50rem;
+}
+
+.photo-box2 {
+  margin-left: 3%; 
+  max-width: 80%;
 }
 
 .profile-container {
