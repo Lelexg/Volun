@@ -38,10 +38,11 @@ const Header = () => {
           <Link href="/"><img className="logo" src={logo} alt="logo" /></Link>
         </Grid>
         <Grid item xs={7} className="button-header">
-          <Login/>
-          <Link href="/">
-            <Button color="primary" variant="outlined">
-              Para parceiros
+          <Login volunteer={true}/>
+          <Login volunteer={false}/>
+          <Link href="/volunteer/projects">
+            <Button>
+              Projetos
             </Button>
           </Link>
         </Grid>

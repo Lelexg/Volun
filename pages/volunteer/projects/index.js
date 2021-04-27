@@ -24,11 +24,11 @@ const Index = () => {
         <Grid item xs={6} style={{marginTop: '3%'}}>
           <input className="search" type="text" placeholder="  &#128269;  Pesquisar"/>
           {order ?
-          <Button style={{ marginTop: '5%', float: 'right', marginRight: '15%'}} color="primary" variant="outlined" onClick={ordenar}>
+          <Button className='order' color="primary" variant="outlined" onClick={ordenar}>
             &#8593;	&nbsp; Ordenar
           </Button>
           :
-          <Button style={{ marginTop: '5%', float: 'right', marginRight: '15%'}} color="primary" variant="outlined" onClick={ordenar}>
+          <Button className='order' color="primary" variant="outlined" onClick={ordenar}>
             &#8595;	&nbsp; Ordenar
           </Button>
           }
