@@ -42,8 +42,8 @@ export default function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider theme={theme}>
       <Auth0Provider
-      domain="volundev.us.auth0.com"
-      clientId="sg0JHgdzEjQSC1HUvhFoGG1CAA7NG5W2"
+      domain="volun-dev.us.auth0.com"
+      clientId="oBQOnMccTWb5WqyGVXg6ceGk2JZDlke1"
       redirectUri="http://localhost:3000/profile"
       handleRedirectCallback
       setSession

@@ -40,10 +40,17 @@ const Profile = () => {
 
   useEffect(() =>{
     console.log(id)
-    if(id){
+    if(id && isAuthenticated){
       setSelected(id)
     }
   }, [id])
+
+  
+  useEffect(() =>{
+    if(!isAuthenticated){
+      window.location.href = "/notLoggedIn"
+    }
+  }, [isAuthenticated])
 
   return (
     isAuthenticated && (
@@ -54,8 +61,7 @@ const Profile = () => {
         </Grid>
         <Grid item xs={5}>
           <h1 className='profile-name'>{user.name}</h1>
-          <p className='profile-email'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-          Morbi enim tortor posuere volutpat feugiat turpis tempus et sed. Sit purus, donec sagittis, vitae, amet. A id venenati</p>
+          <p className='profile-email'>Amador de animais. Membro ativo da comunidade. Porta-voz da mudança.</p>
         </Grid>
         <Grid item xs={5}>
           <img style={{height: '100px'}} alt="badge" src={badge}></img>

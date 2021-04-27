@@ -1,14 +1,13 @@
 import React, {useState, useEffect} from "react";
-import Logout from '../../components/login/logout';
+import Logout from '../../../components/login/logout';
 import { useAuth0 } from "@auth0/auth0-react";
 import { Button, Grid } from "@material-ui/core";
-import badge from '../../public/images/check-mark-badge.svg';
+import badge from '../../../public/images/check-mark-badge.svg';
 
-import PersonalData from '../../components/profile/personalData';
-import Addresses from '../../components/profile/addresses';
-import Volunteering from '../../components/profile/volunteering'
-import Favorite from '../../components/profile/favorite'
-import Quiz from '../../components/profile/quiz'
+import PersonalData from '../../../components/profile/personalData';
+import Addresses from '../../../components/profile/addresses';
+import Projects from '../../../components/profile/projects'
+import { useRouter } from 'next/router'
 
 const Profile = () => {
   const { user, isAuthenticated } = useAuth0();
@@ -34,6 +33,17 @@ const Profile = () => {
     setView(e.toString())
   }
 
+  const router = useRouter()
+  const { id } = router.query
+
+  useEffect(() =>{
+    console.log(id)
+    if(id && isAuthenticated){
+      setSelected(id)
+    }
+  }, [id])
+
+  
   useEffect(() =>{
     if(!isAuthenticated){
       window.location.href = "/notLoggedIn"
@@ -41,7 +51,7 @@ const Profile = () => {
   }, [isAuthenticated])
 
   return (
-    isAuthenticated &&
+    isAuthenticated && (
       <div>
       <Grid container sx={12} className='profile-container'>
         <Grid item xs={1}>
@@ -57,9 +67,7 @@ const Profile = () => {
         <Grid item xs={2} style={{paddingTop: '5%'}} className='profile-menu'>
           <p id="1" onClick={(e) => setSelected(e.target.id)}>Dados Pessoais</p>
           <p id="2" onClick={(e) => setSelected(e.target.id)}>Endereços</p>
-          <p id="3" onClick={(e) => setSelected(e.target.id)}>Voluntariados</p>
-          <p id="4" onClick={(e) => setSelected(e.target.id)}>Favoritos</p>
-          <p id="5" onClick={(e) => setSelected(e.target.id)}>Quiz</p>
+          <p id="3" onClick={(e) => setSelected(e.target.id)}>Projetos</p>
           <Logout/>
         </Grid>
         <Grid item xs={10}>
@@ -70,18 +78,12 @@ const Profile = () => {
             <Addresses/>
           }
           { view === "3" &&
-            <Volunteering/>
-          }
-          { view === "4" &&
-            <Favorite/>
-          }
-          { view === "5" &&
-            <Quiz/>
+            <Projects/>
           }
         </Grid>
       </Grid>
       </div>
-
+    )
   );
 };
 

@@ -8,6 +8,9 @@ import { Button, Grid } from "@material-ui/core";
 import missao from '../public/images/missao.svg';
 import line from '../public/images/Line.svg';
 import Link from 'next/link';
+import Login2 from '../components/login/login2'
+import teenager2 from '../public/images/teenager2.jpeg';
+import teenager3 from '../public/images/teenager3.jpg';
 
 const Index = () => {
 
@@ -15,7 +18,7 @@ const Index = () => {
     <div className='container'>
       <Grid container sx={12} spacing={3} style={{paddingTop: '10%'}}>
           <Grid item xs={6}>
-          <img className="freelancer" src={freelancer} alt="freelancer" />
+          <img style={{maxWidth: '100%', marginLeft: '10%'}} src={freelancer} alt="freelancer" />
           </Grid>
           <Grid item xs={6}>
             <h1>Um novo jeito de fazer trabalho voluntário</h1>
@@ -24,31 +27,23 @@ const Index = () => {
               A Volun oferece uma conexão única entre a ONG e o Voluntário, indicando você exatamente para o trabalho que você precisa!
             </h3>
             <div style={{paddingTop: '8%'}}>
-            <Link href="/">
-                <Button style={{marginRight: '5%', backgroundImage: 'linear-gradient(#6C63FF, #AD40F0)', color: "#fff"}}>
-                  Quero ser voluntário
-                </Button>
-              </Link>
-              <Link href="/profile">
-                <Button color="primary" variant="outlined">
-                  Preciso de voluntários
-                </Button>
-              </Link>
+            <Login2 volunteer={true}/>
+            <Login2 volunteer={false}/>
             </div>
           </Grid>
       </Grid> 
       <Grid container sx={12} spacing={3} style={{paddingTop: '5%'}}>
         <Grid item xs={5}>
           <h1 className="title2">O que falta para você se destacar em sua empresa?</h1>
-          <h1 style={{float: 'right', fontWeight: 'normal'}}>A Volun te ajuda a descobrir!</h1>
+          <h1 style={{float: 'right', fontWeight: 'normal', fontSize: '2vw'}}>A Volun te ajuda a descobrir!</h1>
         </Grid>
         <Grid item xs={1}></Grid>
         <Grid container item xs={6}>
           <Grid item xs={2}>
-            <img src={line} alt="line" />
+            <img src={line} alt="line" style={{maxHeight: '30vw'}}/>
           </Grid>
           <Grid item xs={6}>
-            <img style={{paddingTop: '10%'}} src={questions} alt="questions" />
+            <img style={{paddingTop: '10%', maxWidth: '100%'}} src={questions} alt="questions" />
           </Grid>
         </Grid>
       </Grid> 
@@ -61,12 +56,12 @@ const Index = () => {
         </Grid>
         <Grid item xs={1}></Grid>
         <Grid container item xs={6}>
-            <img src={marketing} alt="marketing" />
+            <img src={marketing} alt="marketing" style={{maxWidth: '100%'}}/>
         </Grid>
       </Grid> 
       <Grid container sx={12} spacing={3} style={{paddingTop: '5%'}}>
         <Grid container item xs={6}>
-            <img className="freelancer" src={missao} alt="missao" />
+            <img style={{maxWidth: '100%', marginLeft: '10%'}} src={missao} alt="missao" />
         </Grid>
         <Grid item xs={1}></Grid>
         <Grid item xs={5}>
@@ -85,7 +80,7 @@ const Index = () => {
         </Grid>
         <Grid item xs={1}></Grid>
         <Grid item xs={6}>
-            <img src={habilidades} alt="habilidades" />
+            <img src={habilidades} alt="habilidades" style={{maxWidth: '100%'}} />
         </Grid>
       </Grid> 
       <Grid container sx={12} spacing={3} style={{paddingTop: '5%', paddingBottom: '5%'}}>
@@ -93,9 +88,9 @@ const Index = () => {
           <h1 className="title5">Nossos Voluntários</h1>
         </Grid>
         <Grid container item xs={12} spacing={2} alignItems='center'>
-          <div className="box1">
-            <img className="box-photo" src={photo} alt="habilidades" />
-            <p style={{paddingTop: '5%'}} className='box-text'>Wilson Rodrigues</p>
+          <div className="box" style={{marginLeft: '10%'}}>
+            <img className="box-photo" src={photo} alt="photo" />
+            <p className='box-text'>Wilson Rodrigues</p>
             <p className='box-text'>22 anos</p>
             <br></br>
             <p className='box-text-content'>
@@ -103,17 +98,17 @@ const Index = () => {
             </p>
           </div>
           <div className="box">
-            <img className="box-photo" src={photo} alt="habilidades" />
-            <p style={{paddingTop: '5%'}} className='box-text'>Arnaldo Antunes</p>
-            <p className='box-text'>22 anos</p>
+            <img className="box-photo" src={teenager2} alt="photo" />
+            <p className='box-text'>Amanda Toledo</p>
+            <p className='box-text'>23 anos</p>
             <br></br>
             <p className='box-text-content'>
-            Recem formado em administração publica. Conheci a plataforma ainda na faculdade por meio de um projeto social faz 2 anos. 
+            Recem formada em administração publica. Conheci a plataforma ainda na faculdade por meio de um projeto social faz 2 anos. 
             </p>
           </div>
           <div className="box">
-            <img className="box-photo" src={photo} alt="habilidades" />
-            <p style={{paddingTop: '5%'}} className='box-text'>Douglas Pacheco</p>
+            <img className="box-photo" src={teenager3} alt="photo" />
+            <p className='box-text'>Douglas Pacheco</p>
             <p className='box-text'>26 anos</p>
             <br></br>
             <p className='box-text-content'>
@@ -128,7 +123,7 @@ const Index = () => {
           <p className='title6p'>Faça o nosso teste e encontre o Trabalho que mais combina com suas necessidades nesse momento!</p>
         </Grid>
       </Grid>
-      <Grid container sx={12} spacing={3} style={{paddingLeft: '5%', paddingTop: '5%', paddingBottom: '5%'}}>
+      <Grid container sx={12} spacing={3} style={{paddingLeft: '5%', paddingTop: '5%', paddingBottom: '10%'}}>
         <Grid item xs={4} className='vertical-line-right' style={{float: 'right'}}>
           <h1 className='title6'><img src={roundCheck} alt="round-check" style={{paddingRight: '5%'}}></img>135+</h1>
           <p className='title6p'>Empresas utilizam</p>
@@ -141,9 +136,6 @@ const Index = () => {
           <h1 className='title6'><img src={roundCheck} alt="round-check" style={{paddingRight: '5%'}}></img>450+</h1>
           <p className='title6p'>Voluntários trabalhando</p>
         </Grid>
-      </Grid>
-      <Grid container sx={12} spacing={3} style={{paddingTop: '5%', paddingBottom: '10%', paddingLeft: '38%'}}>
-        <Button className='button-quiz'>Iniciar Quiz</Button>
       </Grid>
     </div>
   )

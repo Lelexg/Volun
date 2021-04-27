@@ -31,7 +31,7 @@ const Index = () => {
           </Grid>
           <Grid item xs={6} style={{paddingRight: '2%'}}>
             <h1>E se você pudesse descobrir exatamente os pontos em que você precisa trabalhar?</h1>
-            <h3 style={{width: '70%', fontWeight: 'normal'}}>
+            <h3 style={{maxWidth: '70%', fontWeight: 'normal'}}>
               A Volun desenvolveu um Quiz que te ajuda a entender exatamente onde você precisa aprimorar! 
               E ainda te indicamos para trabalhos Voluntários que são perfeitos para você!
             </h3>
