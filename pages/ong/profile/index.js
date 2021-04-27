@@ -1,12 +1,12 @@
 import React, {useState, useEffect} from "react";
-import Logout from '../../components/login/logout';
+import Logout from '../../../components/login/logout';
 import { useAuth0 } from "@auth0/auth0-react";
 import { Button, Grid } from "@material-ui/core";
-import badge from '../../public/images/check-mark-badge.svg';
+import badge from '../../../public/images/check-mark-badge.svg';
 
-import PersonalData from '../../components/profile/personalData';
-import Addresses from '../../components/profile/addresses';
-import Projects from '../../components/profile/projects'
+import PersonalData from '../../../components/profile/personalData';
+import Addresses from '../../../components/profile/addresses';
+import Projects from '../../../components/profile/projects'
 
 const Profile = () => {
   const { user, isAuthenticated } = useAuth0();
