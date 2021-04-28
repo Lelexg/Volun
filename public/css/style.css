@@ -25,6 +25,16 @@
   letter-spacing: -0.2px;
 }
 
+#bio{
+  border: none;
+  font-weight: 200;
+  background-color: #F4F3FF;
+  font-family: "Nunito";
+  src: url("/fonts/Nunito/Nunito-Semibold.ttf");
+  margin-top: 5%;
+  margin-bottom: 10%;
+}
+
 .box1 {
   height: 20rem;
   width: 25%;
@@ -178,7 +188,6 @@
   font-style: normal;
   font-weight: normal;
   font-size: 1.5vw;
-  line-height: 35px;
   display: flex;
   align-items: center;
   letter-spacing: -0.2px;
@@ -192,7 +201,6 @@
   font-style: normal;
   font-weight: normal;
   font-size: 1.2vw;
-  line-height: 35px;
   display: flex;
   align-items: center;
   letter-spacing: -0.2px;
@@ -283,7 +291,7 @@
 
 .footer {
   background-image: linear-gradient(#6C63FF, #AD40F0);
-  height: 400px;
+  height: 30vw;
 }
 
 .footer p {
@@ -291,13 +299,14 @@
   font-weight: bolder;
   font-family: "Nunito";
   src: url("/fonts/Nunito/Nunito-Bolder.ttf");
-  font-size: 1.2rem;
+  font-size: 1.5vw;
 }
 
 .footer-link {
   color: white;
   font-family: "Nunito";
   src: url("/fonts/Nunito/Nunito-Regular.ttf");
+  font-size: 1.3vw;
   padding-top: 5%;
   cursor: pointer;
   padding-left: 2%;
@@ -353,7 +362,7 @@
 }
 
 .logo {
-  height: 60px;
+  height: 5vw;
   float: left;
 }
 
@@ -439,7 +448,7 @@
 .personal-input input, .personal-input select {
   border: none;
   font-weight: 200;
-  color: #5E5E66;
+  background-color: #F4F3FF;
   font-family: "Nunito";
   src: url("/fonts/Nunito/Nunito-Semibold.ttf");
   margin-top: 5%;
@@ -488,7 +497,7 @@
 
 .profile-name {
   color: #6C63FF;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-family: "Nunito";
   src: url("/fonts/Nunito/Nunito-Bold.ttf");
   padding-left: 2%;
@@ -614,6 +623,14 @@
   float: left;
 }
 
+.saved {
+  font-family: "Nunito";
+  src: url("/fonts/Nunito/Nunito-Semibold.ttf");
+  text-align: center;
+  font-size: 1.5vw;
+  color: #6C63FF;
+}
+
 .search {
   width: 50%;
   height: 1.8rem;
@@ -636,7 +653,7 @@
   text-align: center;
   padding: 2%;
   cursor: pointer;
-  max-width: 20%;
+  max-width: 15%;
 }
 
 .subtitle3 {
@@ -644,7 +661,7 @@
   color: white;
   padding-left: 15%;
   font-weight: 600;  
-  font-size: 18px;
+  font-size: 1.1vw;
   line-height: 40px;
   line-height: 40px;
   font-family: "Nunito";
@@ -653,8 +670,8 @@
 
 .subtitle4 {
   padding-top: 5%;
-  font-weight: 600;  
-  font-size: 18px;
+  font-weight: 600;   
+  font-size: 1.1vw;
   line-height: 40px;
   line-height: 40px;
   float: right;
@@ -717,7 +734,7 @@
   src: url("/fonts/Nunito/Nunito-Regular.ttf");
   font-style: normal;
   font-weight: bold;
-  font-size: 40px;
+  font-size: 1.2vw;
   text-align: center;
 }
 
@@ -726,7 +743,7 @@
   src: url("/fonts/Nunito/Nunito-Regular.ttf");
   text-align: center;
   font-style: normal;
-  font-size: 20px;
+  font-size: 1.1vw;
 }
 
 .vertical-line-left {

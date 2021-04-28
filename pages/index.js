@@ -125,15 +125,15 @@ const Index = () => {
       </Grid>
       <Grid container sx={12} spacing={3} style={{paddingLeft: '5%', paddingTop: '5%', paddingBottom: '10%'}}>
         <Grid item xs={4} className='vertical-line-right' style={{float: 'right'}}>
-          <h1 className='title6'><img src={roundCheck} alt="round-check" style={{paddingRight: '5%'}}></img>135+</h1>
+          <h1 className='title6'><img src={roundCheck} alt="round-check" style={{paddingRight: '5%', maxWidth: '10%'}}></img>135+</h1>
           <p className='title6p'>Empresas utilizam</p>
         </Grid>
         <Grid item xs={3}>
-          <h1 className='title6'><img src={roundCheck} alt="round-check" style={{paddingRight: '5%'}}></img>200+</h1>
+          <h1 className='title6'><img src={roundCheck} alt="round-check" style={{paddingRight: '5%', maxWidth: '10%'}}></img>200+</h1>
           <p className='title6p'>Softskills aprimorados</p>
         </Grid>
         <Grid item xs={4} className='vertical-line-left' style={{float: 'left'}}>
-          <h1 className='title6'><img src={roundCheck} alt="round-check" style={{paddingRight: '5%'}}></img>450+</h1>
+          <h1 className='title6'><img src={roundCheck} alt="round-check" style={{paddingRight: '5%', maxWidth: '10%'}}></img>450+</h1>
           <p className='title6p'>Voluntários trabalhando</p>
         </Grid>
       </Grid>
