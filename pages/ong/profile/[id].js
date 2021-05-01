@@ -33,8 +33,7 @@ const Profile = () => {
     document.getElementById(e.toString()).className = "profile-selected" 
     setView(e.toString())
   }
-
-  const router = useRouter()
+  
   const { id } = router.query
 
   useEffect(() =>{
