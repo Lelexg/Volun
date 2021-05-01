@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import { Grid, Button } from "@material-ui/core";
 import { useAuth0 } from "@auth0/auth0-react"; 
-import { gql, useMutation  } from "@apollo/client";
-import InputMask from 'react-input-mask';
-import Link from 'next/link';
-import questionMark from '../../public/images/question-mark.svg'
+import hearth_broken from '../../public/images/hearth_broken.svg';
 
 const Projects = () => {
 

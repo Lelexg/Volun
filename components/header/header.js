@@ -12,24 +12,44 @@ const Header = () => {
     isAuthenticated ? (
       <Grid container sx={12} spacing={3} className="header">
         <Grid item xs={5}>
-        <Link href="/volunteer"><img className="logo" src={logo} alt="logo" /></Link>
+        {localStorage.getItem('user') == 'false' ?
+          <Link href="/ong"><img className="logo" src={logo} alt="logo" /></Link>
+          :
+          <Link href="/volunteer"><img className="logo" src={logo} alt="logo" /></Link>
+        }
         </Grid>
         <Grid item xs={7} className="button-header">
-          <Link href="/profile">
-            <Button color="secondary" className="my-profile">
-              Meu perfil
-            </Button>
-          </Link>
+          {localStorage.getItem('user') == 'false' ?
+            <Link href="/ong/profile">
+              <Button color="secondary" className="my-profile">
+                Meu perfil
+              </Button>
+            </Link>
+            :
+            <Link href="/profile">
+              <Button color="secondary" className="my-profile">
+                Meu perfil
+              </Button>
+            </Link>
+          }
           <Link href="/volunteer/projects">
             <Button>
               Projetos
             </Button>
           </Link>
-          <Link href="/volunteer">
-            <Button>
-              Home
-            </Button>
-          </Link>
+          {localStorage.getItem('user') == 'false' ?
+            <Link href="/ong">
+              <Button>
+                Home
+              </Button>
+            </Link>
+            :
+            <Link href="/volunteer">
+              <Button>
+                Home
+              </Button>
+            </Link>
+          }
         </Grid>
       </Grid>
     ) : (

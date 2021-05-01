@@ -9,12 +9,12 @@ const LoginButton = ({volunteer}) => {
     volunteer ?
     (
       <Button style={{float: 'right', backgroundImage: 'linear-gradient(#6C63FF, #AD40F0)', color: "#fff"}} 
-      onClick={() => loginWithRedirect([{display: 'popup', redirect_uri: 'http://localhost:3000/profile'}])}>Sou voluntário</Button>
+      onClick={() => {localStorage.setItem('user', true); loginWithRedirect()}}>Sou voluntário</Button>
     )
     :
     (
       <Button color="primary" variant="outlined" 
-      onClick={() => loginWithRedirect([{display: 'popup', redirect_uri: 'http://localhost:3000/ong/profile'}])}>
+      onClick={() => {localStorage.setItem('user', false); loginWithRedirect()}}>
         Sou parceiro
       </Button>
     )

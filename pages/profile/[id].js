@@ -12,8 +12,9 @@ import Quiz from '../../components/profile/quiz'
 import { useRouter } from 'next/router'
 
 const Profile = () => {
-  const { user, isAuthenticated } = useAuth0();
-  
+  const { user, isAuthenticated, isLoading } = useAuth0();
+  const router = useRouter()
+
   const [view, setView] = useState("1");
   const [rendered, setRendered] = useState(1)
 
@@ -35,7 +36,6 @@ const Profile = () => {
     setView(e.toString())
   }
 
-  const router = useRouter()
   const { id } = router.query
 
   useEffect(() =>{
@@ -47,8 +47,8 @@ const Profile = () => {
 
   
   useEffect(() =>{
-    if(!isAuthenticated){
-      window.location.href = "/notLoggedIn"
+    if(!isLoading && !isAuthenticated){
+      router.push("/notLoggedIn")
     }
   }, [isAuthenticated])
 
@@ -61,7 +61,7 @@ const Profile = () => {
         </Grid>
         <Grid item xs={5}>
           <h1 className='profile-name'>{user.name}</h1>
-          <p className='profile-email'>Amador de animais. Membro ativo da comunidade. Porta-voz da mudança.</p>
+          <p className='profile-email'>{user.email}</p>
         </Grid>
         <Grid item xs={5}>
           <img style={{height: '100px'}} alt="badge" src={badge}></img>

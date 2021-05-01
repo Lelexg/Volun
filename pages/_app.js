@@ -3,7 +3,7 @@ import Header from '../components/header/header.js';
 import Footer from '../components/footer/footer.js';
 import { Auth0Provider } from "@auth0/auth0-react";
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
-import { ApolloProvider } from 'react-apollo';
+import { ApolloProvider } from '@apollo/client';
 import initApollo from '../lib/initApollo';
 import '../public/css/style.css';
 
@@ -45,7 +45,6 @@ export default function MyApp({ Component, pageProps }) {
       domain="volun-dev.us.auth0.com"
       clientId="oBQOnMccTWb5WqyGVXg6ceGk2JZDlke1"
       redirectUri="http://localhost:3000/profile"
-      handleRedirectCallback
       setSession
       silentAuth
       >
@@ -61,11 +60,11 @@ export default function MyApp({ Component, pageProps }) {
           as="font"
           crossOrigin=""
         />
-        <ApolloProvider client={apollo}>
-          <Header/>
-          <Component {...pageProps} />
-          <Footer/>
-        </ApolloProvider>
+        <Header/>
+          <ApolloProvider client={apollo}>
+            <Component {...pageProps} />
+          </ApolloProvider>
+        <Footer/>
       </Auth0Provider>
     </ThemeProvider>
   )
