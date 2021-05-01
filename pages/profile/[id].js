@@ -36,7 +36,6 @@ const Profile = () => {
     setView(e.toString())
   }
 
-  const router = useRouter()
   const { id } = router.query
 
   useEffect(() =>{
