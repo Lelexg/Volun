@@ -59,6 +59,7 @@ const Profile = () => {
         </Grid>
         <Grid item xs={5}>
           <h1 className='profile-name'>{user.name}</h1>
+          <p className='profile-email'>{user.email}</p>
         </Grid>
         <Grid item xs={5}>
           <img style={{height: '100px'}} alt="badge" src={badge}></img>

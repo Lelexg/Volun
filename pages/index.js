@@ -117,7 +117,7 @@ const Index = () => {
           </div>
         </Grid>
       </Grid> 
-      <Grid container sx={12} spacing={3} style={{paddingTop: '5%', paddingBottom: '5%'}}>
+      <Grid container sx={12} spacing={3} style={{paddingTop: '5%'}}>
         <Grid item xs={12}>
           <h1 className='title6'>Vamos levar o seu trabalho voluntário para o próximo nível</h1>
           <p className='title6p'>Faça o nosso teste e encontre o Trabalho que mais combina com suas necessidades nesse momento!</p>
@@ -135,6 +135,13 @@ const Index = () => {
         <Grid item xs={4} className='vertical-line-left' style={{float: 'left'}}>
           <h1 className='title6'><img src={roundCheck} alt="round-check" style={{paddingRight: '5%', maxWidth: '10%'}}></img>450+</h1>
           <p className='title6p'>Voluntários trabalhando</p>
+        </Grid>
+        <Grid container sx={12} spacing={3} style={{paddingTop: '10%', paddingBottom: '2%'}}>
+          <Link href="/volunteer/projects">
+            <Button style={{marginLeft: '34%',backgroundImage: 'linear-gradient(#6C63FF, #AD40F0)', color: "#fff", height: '5vw', fontSize: '1.5vw'}}>
+              Descubra novos projetos
+            </Button>
+          </Link>
         </Grid>
       </Grid>
     </div>

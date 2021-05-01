@@ -270,6 +270,25 @@
   border-radius: 30px;
 }
 
+.description-input {
+  background-color: #F4F3FF;
+  font-size: 1.2vw;
+  font-family: "Nunito";
+  src: url("/fonts/Nunito/Nunito-Regular.ttf");
+  border: none;
+  width: 120%;
+  height: 6.5vw;
+}
+
+.details-input {
+  background-color: #F4F3FF;
+  font-size: 1.2vw;
+  font-family: "Nunito";
+  src: url("/fonts/Nunito/Nunito-Regular.ttf");
+  border: none;
+  height: 3.5vw;
+}
+
 .favorite-p {
   margin-left: 13%;
 }
@@ -680,6 +699,16 @@
   padding-right: 15%;
   font-family: "Nunito";
   src: url("/fonts/Nunito/Nunito-Regular.ttf");
+}
+
+.title-input {
+  background-color: #F4F3FF;
+  font-size: 1.8vw;
+  font-family: "Nunito";
+  src: url("/fonts/Nunito/Nunito-Bold.ttf");
+  font-weight: bold;
+  border: none;
+  width: 120%;
 }
 
 .title2 {
