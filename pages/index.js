@@ -18,7 +18,7 @@ const Index = () => {
     <div className='container'>
       <Grid container sx={12} spacing={3} style={{paddingTop: '10%'}}>
           <Grid item xs={6}>
-          <img style={{maxWidth: '100%', marginLeft: '10%'}} src={freelancer} alt="freelancer" />
+          <img style={{maxWidth: '75%', marginLeft: '10%'}} src={freelancer} alt="freelancer" />
           </Grid>
           <Grid item xs={6}>
             <h1>Um novo jeito de fazer trabalho voluntário</h1>
@@ -56,7 +56,7 @@ const Index = () => {
         </Grid>
         <Grid item xs={1}></Grid>
         <Grid container item xs={6}>
-            <img src={marketing} alt="marketing" style={{maxWidth: '100%'}}/>
+            <img src={marketing} alt="marketing" style={{maxWidth: '75%'}}/>
         </Grid>
       </Grid> 
       <Grid container sx={12} spacing={3} style={{paddingTop: '5%'}}>
@@ -80,7 +80,7 @@ const Index = () => {
         </Grid>
         <Grid item xs={1}></Grid>
         <Grid item xs={6}>
-            <img src={habilidades} alt="habilidades" style={{maxWidth: '100%'}} />
+            <img src={habilidades} alt="habilidades" style={{maxWidth: '100%', height: '100%' }} />
         </Grid>
       </Grid> 
       <Grid container sx={12} spacing={3} style={{paddingTop: '5%', paddingBottom: '5%'}}>
