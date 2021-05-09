@@ -44,7 +44,7 @@ export default function MyApp({ Component, pageProps }) {
       <Auth0Provider
       domain="volun-dev.us.auth0.com"
       clientId="oBQOnMccTWb5WqyGVXg6ceGk2JZDlke1"
-      redirectUri="http://localhost:3000/profile"
+      redirectUri="https://volun-portal.vercel.app/profile"
       setSession
       silentAuth
       >
