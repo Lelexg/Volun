@@ -3,10 +3,12 @@ import Logout from '../../../components/login/logout';
 import { useAuth0 } from "@auth0/auth0-react";
 import { Button, Grid } from "@material-ui/core";
 import badge from '../../../public/images/check-mark-badge.svg';
+import Loading from '../../../components/animation/loading'
 
-import PersonalData from '../../../components/profile/personalData';
+import PersonalData from '../../../components/profile/ongPersonalData';
 import Addresses from '../../../components/profile/addresses';
 import Projects from '../../../components/profile/projects'
+import Enrolment from '../../../components/profile/enrolments'
 import { useRouter } from 'next/router'
 
 const Profile = () => {
@@ -38,19 +40,25 @@ const Profile = () => {
 
   useEffect(() =>{
     if(id && isAuthenticated){
-      setSelected(id)
+      if(id == 4){
+        setView(id.toString())
+      } else {
+        setSelected(id)
+      }
     }
-  }, [id])
-
+  }, [id, isAuthenticated])
   
   useEffect(() =>{
     if(!isLoading && !isAuthenticated){
       router.push("/notLoggedIn")
     }
+    if(!isLoading && localStorage.getItem('user') == 'true'){
+      router.push("/profile")
+    }
   }, [isAuthenticated])
 
   return (
-    isAuthenticated && (
+    isAuthenticated ? (
       <div>
       <Grid container sx={12} className='profile-container'>
         <Grid item xs={1}>
@@ -63,7 +71,7 @@ const Profile = () => {
         <Grid item xs={5}>
           <img style={{height: '100px'}} alt="badge" src={badge}></img>
         </Grid>
-        <Grid item xs={2} style={{paddingTop: '5%'}} className='profile-menu'>
+        <Grid item xs={2} style={{paddingTop: '5%', paddingBottom: '5%'}} className='profile-menu'>
           <p id="1" onClick={(e) => setSelected(e.target.id)}>Dados Pessoais</p>
           <p id="2" onClick={(e) => setSelected(e.target.id)}>Endereços</p>
           <p id="3" onClick={(e) => setSelected(e.target.id)}>Projetos</p>
@@ -77,12 +85,17 @@ const Profile = () => {
             <Addresses/>
           }
           { view === "3" &&
-            <Projects/>
+            <Projects setView={setView}/>
+          }
+          { view === "4" &&
+            <Enrolment/>
           }
         </Grid>
       </Grid>
       </div>
     )
+    :
+    <Loading/>
   );
 };
 

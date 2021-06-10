@@ -13,6 +13,7 @@ export const ADD_USER = gql`
       phone
       bio
       document
+      photo
   }
 }`;
 
@@ -48,6 +49,7 @@ const PersonalData = () => {
 
   const save = () => {
 
+    console.log(user.picture)
     createUser({variables: {
       user:{
         firstname: user.given_name,
@@ -55,7 +57,8 @@ const PersonalData = () => {
         email: user.email,
         phone: phone,
         bio: bio,
-        document: CPF
+        document: CPF,
+        photo: user.picture
       } 
     }}).then((result) => {
       console.log(result)
@@ -72,10 +75,12 @@ const PersonalData = () => {
 
   useEffect(() => {
     if(data){
-      console.log(data)
-      setCPF(data.getUser.document)
-      setBio(data.getUser.bio)
-      setPhone(data.getUser.phone)
+      if(data.getUser){
+        setCPF(data.getUser.document)
+        setBio(data.getUser.bio)
+        setPhone(data.getUser.phone)
+        localStorage.setItem("OBJ", data.getUser)
+      }
     }
   }, [data])
 
@@ -113,7 +118,7 @@ const PersonalData = () => {
           {saved ?
           <h3 className="saved">Salvo!</h3>
           :
-          <Button color="primary" variant="contained" style={{float: 'left'}} onClick={save}>Salvar Alterações</Button>
+          <Button color="primary" variant="contained" style={{float: 'left', fontSize: '1.3vw'}} onClick={save}>Salvar Alterações</Button>
           }
         </Grid>
         <Grid item xs={5} className="personal-input">

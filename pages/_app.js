@@ -37,14 +37,14 @@ export default function MyApp({ Component, pageProps }) {
     },
   });
 
- const apollo = initApollo();
+  const apollo = initApollo();
   
   return (
     <ThemeProvider theme={theme}>
       <Auth0Provider
       domain="volun-dev.us.auth0.com"
       clientId="oBQOnMccTWb5WqyGVXg6ceGk2JZDlke1"
-      redirectUri="https://volun-portal.vercel.app/profile"
+      redirectUri="http://localhost:3000/profile"
       setSession
       silentAuth
       >

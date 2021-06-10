@@ -9,7 +9,7 @@ import Link from 'next/link';
 const Footer = () => {
 
   return (
-      <Grid container sx={12} spacing={3} className="footer">
+      <Grid container className="footer">
         <Grid item xs={6}>
           <p style={{paddingLeft: '25%'}}>Nos siga nas redes sociais</p>
           <hr style={{width: '50%'}}></hr>
