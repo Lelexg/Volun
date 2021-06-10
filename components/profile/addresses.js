@@ -60,7 +60,7 @@ const Addresses = () => {
   const [state, setState] = useState("")
   const [country, setCountry] = useState("")
 
-  if(localStorage.getItem("OBJ").locality){
+  if(localStorage.getItem("OBJ")){
     const { loading, error, data } = useQuery(
       GET_ADDRESS,
       {
