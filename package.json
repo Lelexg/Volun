@@ -1,0 +1,47 @@
+{
+  "name": "volun-portal",
+  "version": "0.1.0",
+  "description": "![GitHub](https://img.shields.io/github/license/Lelexg/volun?style=plastic)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.1.1",
+    "@auth0/auth0-react": "^1.5.0",
+    "@auth0/nextjs-auth0": "^0.15.0",
+    "@aws-sdk/credential-provider-ini": "^3.15.0",
+    "@material-ui/core": "^4.11.0",
+    "@zeit/next-css": "^1.0.1",
+    "apollo-cache-inmemory": "^1.6.6",
+    "apollo-link-http": "^1.5.17",
+    "aws-sdk": "^2.906.0",
+    "googleapis": "^27.0.0",
+    "graphql": "^15.3.0",
+    "graphql-tag": "^2.11.0",
+    "isomorphic-unfetch": "^3.1.0",
+    "next": "^10.0.2",
+    "next-compose-plugins": "^2.2.1",
+    "next-images": "^1.6.0",
+    "next-pwa": "^5.2.21",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-input-mask": "^2.0.4",
+    "react-lottie": "^1.2.3",
+    "react-router-dom": "^5.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lelexg/volun-portal.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lelexg/volun-portal/issues"
+  },
+  "homepage": "https://github.com/Lelexg/volun-portal#readme"
+}
