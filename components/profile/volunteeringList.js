@@ -20,6 +20,9 @@ const VolunteeringList = ({enrolment}) => {
       {enrolment.EnrolmentStatus.description == 'Denied' &&
         <p style={{fontWeight: 'bold'}}>Recusado</p>
       }
+      {enrolment.EnrolmentStatus.description == 'Closed' &&
+        <p style={{fontWeight: 'bold'}}>Concluído!</p>
+      }
       <Link href={`/volunteer/projects/details/` + enrolment.Project.id}><Button className="project-button" color="primary" variant="contained">Ver projeto</Button></Link>
     </Grid>
   )

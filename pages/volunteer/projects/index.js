@@ -8,8 +8,8 @@ import Loading from '../../../components/animation/loading'
 import { gql, useLazyQuery  } from "@apollo/client";
 
 const GET_PROJECTS = gql`
-  query getMyProjects($email: String){
-    getMyProjects(email: $email){
+  query getProjects{
+    getProjects{
       id
       title
       locality
@@ -17,9 +17,7 @@ const GET_PROJECTS = gql`
       workload
       Organization {
         id
-        photos {
-          description
-        }
+        photo
       }
       Photo {
         description
@@ -30,6 +28,7 @@ const GET_PROJECTS = gql`
     }
   }
 `;
+
 const Index = () => {
   const { user, isAuthenticated } = useAuth0();
   
@@ -59,11 +58,8 @@ const Index = () => {
       if(document.getElementById("tudo")){ 
         document.getElementById("tudo").checked = true
       }
-      getProjects(
-      {
-        variables: { email: localStorage.getItem("OBJ").email }
-      },
-    )}
+      getProjects()
+    }
   },[data])
 
   const [filterProjects, setFilterProject] = useState("")
@@ -181,7 +177,7 @@ const Index = () => {
           <label for="Esporte">Esporte</label>
           </div>
         </Grid>
-        {data.getMyProjects.sort(sortData).filter(filterData).filter(filterTitles).map((project) => {
+        {data.getProjects.sort(sortData).filter(filterData).filter(filterTitles).map((project) => {
           return (
             <Grid item xs={2}>
               <ProjectBox project={project}/>

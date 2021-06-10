@@ -155,8 +155,8 @@ const Details = () => {
               }
             </Grid>
           </Grid>
-          {localStorage.getItem('user') == 'true' ?
-            isAuthenticated ? (
+            {isAuthenticated ? (
+            localStorage.getItem('user') == 'true' ?
             <span>
             {dataEnrolled ?
             dataEnrolled.getIsEnrolled == null ?
@@ -200,11 +200,11 @@ const Details = () => {
             :
             <></>
             }
-            </span>)
+            </span>
+            :
+            <></>)
             :
             <h3 className="not-logged-text">É necessário estar logado para se inscrever em um projeto</h3>
-            :
-            <></>
           }
         </Grid>
         <Grid item xs={1}>

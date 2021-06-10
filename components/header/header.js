@@ -12,15 +12,17 @@ const Header = () => {
   if(typeof document !== 'undefined'){
     var header = document.getElementById("myHeader");
 
-    var sticky = header.offsetTop;
+    if(header != null){
+      var sticky = header ? header.offsetTop : "";
 
-    window.onscroll = function() {
-      if (window.pageYOffset > sticky) {
-        header.classList.add("sticky");
-        document.body.style.marginTop = "11%"
-      } else {
-        header.classList.remove("sticky");
-        document.body.style.marginTop = "0"
+      window.onscroll = function() {
+        if (window.pageYOffset > sticky) {
+          header.classList.add("sticky");
+          document.body.style.marginTop = "11%"
+        } else {
+          header.classList.remove("sticky");
+          document.body.style.marginTop = "0"
+        }
       }
     }
   }

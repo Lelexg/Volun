@@ -19,9 +19,7 @@ const GET_PROJECTS = gql`
       workload
       Organization {
         id
-        photos {
-          description
-        }
+        photo
       }
       Photo {
         description
