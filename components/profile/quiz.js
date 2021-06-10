@@ -16,10 +16,10 @@ const Quiz = () => {
           <h2>A Volun te ajuda a descobrir!</h2>
           <br></br>
           <br></br>
-          <Link href="/"><Button color="primary" variant="contained" style={{float: 'left', width: '70%'}}>Iniciar Quiz</Button></Link>
+          <Link href="/"><Button color="primary" variant="contained" style={{float: 'left', width: '60%', fontSize: '1.5vw', height: '3vw'}}>Iniciar Quiz</Button></Link>
         </Grid>
         <Grid item xs={5} className="personal-input">
-          <img className="question-mark" src={questionMark} alt="people question mark" />
+          <img style={{height: '20vw'}} src={questionMark} alt="people question mark" />
         </Grid>
       </Grid>
     )
