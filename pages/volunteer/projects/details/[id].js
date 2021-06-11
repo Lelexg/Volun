@@ -161,7 +161,7 @@ const Details = () => {
             {dataEnrolled ?
             dataEnrolled.getIsEnrolled == null ?
             <Grid item xs={4} className='box-section2' style={{float: 'left'}}>
-              <Button style={{fontSize: '1vw', width: '100%', backgroundImage: 'linear-gradient(#6C63FF, #AD40F0)', color: "#fff"}}>
+              <Button onClick={} style={{fontSize: '1vw', width: '100%', backgroundImage: 'linear-gradient(#6C63FF, #AD40F0)', color: "#fff"}}>
                 Inscrever!
               </Button>
             </Grid>
