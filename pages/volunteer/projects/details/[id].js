@@ -232,7 +232,7 @@ const Details = () => {
           <img src={data.getProjectDetails.Photo[1].description} alt='photo 2' className="photo-box2"/>
           <img src={data.getProjectDetails.Photo[2].description} alt='photo 3' className="photo-box2"/>
           <div style={{position: 'relative', top: '5%'}}>
-          <img src={data.getProjectDetails.Organization.photo} alt='logo ONG' className="photo-box3"/>
+          <img src={logoONG} alt='logo ONG' className="photo-box3"/>
           <p className="ong-description">{data.getProjectDetails.Organization.description}</p>
             </div>
         </Grid>
