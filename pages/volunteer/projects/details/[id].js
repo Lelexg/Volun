@@ -156,16 +156,16 @@ const Details = () => {
           <p>{data.getProjectDetails.about}</p>
           <Grid container sx={12}>
             <Grid item xs={5} className='box-section2' style={{float: 'left'}}>
-              <h3><img src={clock} alt='clock' style={{marginRight: '2%', marginBottom: '-2%'}}/>Frequência</h3>
+              <h3><img src={clock} alt='clock' style={{marginRight: '2%', marginBottom: '-2%', maxHeight: '2vw'}}/>Frequência</h3>
               <p>{data.getProjectDetails.frequency}</p>
-              <h3><img src={stars} alt='clock' style={{marginRight: '2%', marginBottom: '-2%'}}/>Soft Skills</h3>
+              <h3><img src={stars} alt='clock' style={{marginRight: '2%', marginBottom: '-2%', maxHeight: '2vw'}}/>Soft Skills</h3>
               <p>Comunicação; Flexibilidade; Empatia</p>
             </Grid>
             <Grid item xs={2}></Grid>
             <Grid item xs={5} className='box-section2' style={{float: 'right'}}>
-              <h3><img src={hourglass} alt='clock' style={{marginRight: '2%', marginBottom: '-2%'}}/>Carga Horária</h3>
+              <h3><img src={hourglass} alt='clock' style={{marginRight: '2%', marginBottom: '-2%', maxHeight: '2vw'}}/>Carga Horária</h3>
               <p>{data.getProjectDetails.workload}</p>
-              <h3><img src={location} alt='clock' style={{marginRight: '2%', marginBottom: '-2%'}}/>Local</h3>
+              <h3><img src={location} alt='clock' style={{marginRight: '2%', marginBottom: '-2%', maxHeight: '2vw'}}/>Local</h3>
               {data.getProjectDetails.online ?
                 <p>Remoto</p>
                 :
