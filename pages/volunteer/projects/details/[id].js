@@ -37,6 +37,8 @@ const GET_DETAILS = gql`
         description
       }
       Organization {
+        photo
+        name
         description
       }
     }
@@ -68,6 +70,13 @@ const IS_ENROLLED = gql`
     }
   }
 `;
+const CREATE_ENROLMENT = gql`
+  mutation createEnrolment($enrolment: EnrolmentInput) {
+    createEnrolment(enrolment: $enrolment){
+      id
+    }
+  }
+`;
 
 const Details = () => {
   const { user, isAuthenticated } = useAuth0();
@@ -92,6 +101,7 @@ const Details = () => {
   const [getIsEnrolled, { data: dataEnrolled }] = useLazyQuery(IS_ENROLLED);
 
   const [favorite] = useMutation(FAVORITE);
+  const [create] = useMutation(CREATE_ENROLMENT);
 
   useEffect(() =>{
     if(id){
@@ -125,6 +135,14 @@ const Details = () => {
       favorite({ variables: { user: user.email, project: parseInt(data.getProjectDetails.id)}})
     }
   }, [isLiked])
+
+  const sign = () => {
+    create({ variables: {
+      description: data.getProjectDetails.title + " em " + data.getProjectDetails.Organization.name,
+      user: user.email,
+      project: data.getProjectDetails.id
+    }})
+  }
 
   return (
     data ?
@@ -161,7 +179,7 @@ const Details = () => {
             {dataEnrolled ?
             dataEnrolled.getIsEnrolled == null ?
             <Grid item xs={4} className='box-section2' style={{float: 'left'}}>
-              <Button onClick={} style={{fontSize: '1vw', width: '100%', backgroundImage: 'linear-gradient(#6C63FF, #AD40F0)', color: "#fff"}}>
+              <Button onClick={sign} style={{fontSize: '1vw', width: '100%', backgroundImage: 'linear-gradient(#6C63FF, #AD40F0)', color: "#fff"}}>
                 Inscrever!
               </Button>
             </Grid>
@@ -214,7 +232,7 @@ const Details = () => {
           <img src={data.getProjectDetails.Photo[1].description} alt='photo 2' className="photo-box2"/>
           <img src={data.getProjectDetails.Photo[2].description} alt='photo 3' className="photo-box2"/>
           <div style={{position: 'relative', top: '5%'}}>
-          <img src={logoONG} alt='logo ONG' className="photo-box3"/>
+          <img src={data.getProjectDetails.Organization.photo} alt='logo ONG' className="photo-box3"/>
           <p className="ong-description">{data.getProjectDetails.Organization.description}</p>
             </div>
         </Grid>
