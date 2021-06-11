@@ -36,9 +36,7 @@ const GET_PROJECTS = gql`
       workload
       Organization {
         id
-        photos {
-          description
-        }
+        photo
       }
       Photo {
         description
@@ -159,7 +157,7 @@ const Index = () => {
           <h1 className="title1" style={{paddingLeft: '10%'}}>Categorias</h1>
           <Link href="/volunteer/projects/Meioambiente">
           <div className="box-category" style={{marginLeft: '10%'}}>
-            <img className="image-box-category" src={meioAmbiente} alt="meio-ambiente"/>
+            <img className="image-box-category-2" src={meioAmbiente} alt="meio-ambiente"/>
             <h4>Meio Ambiente</h4>
           </div>
           </Link>
@@ -177,7 +175,7 @@ const Index = () => {
           </Link>
           <Link href="/volunteer/projects/Mulheres">
           <div className="box-category">
-            <img className="image-box-category" src={mulheres} alt="mulheres" style={{maxHeight: '4.6rem'}}/>
+            <img className="image-box-category" src={mulheres} alt="mulheres"/>
             <h4>Mulheres</h4>
           </div>
           </Link>
@@ -206,13 +204,13 @@ const Index = () => {
           </div>
           </Link>
           <Link href="/volunteer/projects/Educacao">
-          <div className="box-category" style={{paddingTop: '1.4%'}}>
+          <div className="box-category">
             <img className="image-box-category" src={educacao} alt="educacao"/>
             <h4>Educação</h4>
           </div>
           </Link>
           <Link href="/volunteer/projects/Politica">
-          <div className="box-category" style={{paddingTop: '0.7%'}}>
+          <div className="box-category" >
             <img className="image-box-category" src={politica} alt="politica"/>
             <h4>Política</h4>
           </div>

@@ -88,13 +88,13 @@ const Header = () => {
         <Grid item xs={8} className="button-header">
           {localStorage.getItem('user') == 'false' ?
             <Link href="/ong/profile">
-              <Button color="secondary" className="my-profile">
+              <Button className="my-profile">
                 Meu perfil
               </Button>
             </Link>
             :
             <Link href="/profile">
-              <Button color="secondary" className="my-profile">
+              <Button className="my-profile">
                 Meu perfil
               </Button>
             </Link>

@@ -76,11 +76,12 @@ body {
 }
 
 .box-category {
-  max-height: 10rem;
+  max-height: 9vw;
   width: 10%;
   align-items: center;
   margin-left: 4%;
   margin-top: 3%;
+  padding-bottom: 1%;
   background: #FFFFFF;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
   border-radius: 30px;
@@ -92,11 +93,13 @@ body {
 }
 
 .box-category h4 {
+  margin-top: 3% !important;
   margin-left: 5%;
   max-width: 90%;
   text-align: center;
   font-family: "Nunito";
   src: url("/fonts/Nunito/Nunito-Regular.ttf");
+  font-size: 1.5vw;
 }
 
 .box-photo {
@@ -164,7 +167,7 @@ body {
 }
 
 .box-skills {
-  height: 10rem;
+  height: 12vw;
   width: 80%;
   align-items: center;
   background: #FFFFFF;
@@ -178,6 +181,7 @@ body {
   margin-top: 8%;
   font-family: "Nunito";
   src: url("/fonts/Nunito/Nunito-Bolder.ttf");
+  font-size: 1.5vw;
 }
 
 .box-skills p, .box-skills-2 p {
@@ -185,10 +189,11 @@ body {
   width: 90%;
   font-family: "Nunito";
   src: url("/fonts/Nunito/Nunito-Regular.ttf");
+  font-size: 1.2vw;
 }
 
 .box-skills-2 {
-  height: 10rem;
+  height: 12vw;
   width: 80%;
   align-items: center;
   background: #FFFFFF;
@@ -248,8 +253,9 @@ body {
 }
 
 .button-sm {
-  height: 1.3rem !important;
-  font-size: 70% !important;
+  height: 2.2vw !important;
+  font-size: 1.3vw !important;
+  width: 100%;
 }
 
 .button-quiz {
@@ -499,9 +505,10 @@ body {
 
 .footer {
   background-image: linear-gradient(#6C63FF, #AD40F0);
-  min-height: 30vw;
-  position:relative;
-  bottom:0;
+  min-height: 60vw;
+  clear: both;
+  position: relative;
+  bottom: 0;
 }
 
 .footer p {
@@ -540,7 +547,7 @@ body {
 
 .image-box {
   max-width: 30%;
-  height: auto;
+  height: 3vw;
   display: block;
   margin-left: 5%;
   margin-top: 5%;
@@ -549,11 +556,21 @@ body {
 
 .image-box-category {
   max-width: 50%;
-  height: auto;
+  height: 5vw;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 15%;
+  padding-top: 15%;
+}
+
+.image-box-category-2 {
+  max-width: 50%;
+  height: 5vw;
+  display: block;
+  padding-top: 5% !important;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 15%;
 }
 
 .images-responsive {
@@ -586,7 +603,7 @@ body {
   margin-right: auto;
   width: 5%;
   margin-top: 10%;
-  margin-bottom: 10%;
+  margin-bottom: 30%;
 }
 
 .loading img {
@@ -846,9 +863,10 @@ body {
 }
 
 .project-box p {
-  font-size: 90%;
+  font-size: 1.5vw;
   font-family: "Nunito";
-  src: url("/fonts/Nunito/Nunito-Semibold.ttf");
+  src: url("/fonts/Nunito/Nunito-Bold.ttf");
+  font-weight: 600;
 }
 
 .project-button {
